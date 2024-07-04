@@ -3,9 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>sum of number</title>
+    <style>
+        .calculate{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            width: 600px;
+            border: 2px solid black;
+            margin: auto;
+            background-color: darksalmon;
+
+        }
+        #number1{
+            margin-top: 20px;
+            border-radius: 10px;
+            height: 20px;
+            padding: 5px;
+            
+        }
+        #number2{
+            margin-top: 20px;
+            border-radius: 10px;
+            height: 20px;
+            padding: 5px;
+        }
+        #text_result{
+            margin: 20px auto;
+            font-size: 20px;
+        }
+        #btn{
+            height: 30px;
+            width: 100px;
+            border-radius: 10px;
+            background-color: antiquewhite;
+            font-size: 20px;
+        
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="calculate">
+        <h1>Calculate sum of two numbers</h1>
+        <input type="text" id="number1" placeholder="Enter number">
+        <input type="text" id="number2" placeholder="Enter number">
+        <b id="text_result">  </b>
+        <button id="btn">calculate</button>
+
+    </div>
+<script>
+    function calsum()
+    {
+        const number1Element = document.getElementById("number1")
+        const number2Element = document.getElementById("number2")
+
+        const sum = parseInt(number1Element.value)  + parseInt(number2Element.value) 
+        const result = document.getElementById("text_result")
+
+        result.innerText=   `sum ${sum}`
+
+    }
+</script>
+
+
 </body>
 </html>
