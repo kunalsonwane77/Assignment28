@@ -32,6 +32,7 @@ h1{
     height: 30px;
 }
 #text_result{
+    font-size: 20px;
     border-radius: 10px;
     background-color: white;
     margin: 50px auto;
@@ -47,10 +48,30 @@ h1{
     <div class="textmatcher">
         <h1>Text matcher</h1>
         <div class="textcontainer">
-        <input type="text" id="text1">
-        <input type="text" id="text2">
+        <input type="text" id="text1" onkeyup="textmatch()">
+        <input type="text" id="text2" onkeyup="textmatch()">
         </div>
         <p id="text_result"></p>
     </div>
+
+    <script>
+        function textmatch()
+        {
+            const textElement1 = document.getElementById("text1")
+            const textElement2 = document.getElementById("text2") 
+            const resultElement = document.getElementById("text_result")
+
+            if (textElement1.value == textElement2.value ){
+                resultElement.innerText = "Text matched"
+                resultElement.style.color="green"
+            }
+            else{
+                resultElement.innerText = "Text not matched"
+                 resultElement.style.color="red"
+            }
+
+       
+        }
+    </script>
 </body>
 </html>
