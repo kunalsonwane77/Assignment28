@@ -50,22 +50,22 @@
         <input type="text" id="number1" placeholder="Enter number">
         <input type="text" id="number2" placeholder="Enter number">
         <b id="text_result">  </b>
-        <button id="btn">calculate</button>
+        <button id="btn" onclick="calsum()">calculate</button>
 
     </div>
-<script>
-    function calsum()
-    {
-        const number1Element = document.getElementById("number1")
-        const number2Element = document.getElementById("number2")
-
-        const sum = parseInt(number1Element.value)  + parseInt(number2Element.value) 
-        const result = document.getElementById("text_result")
-
-        result.innerText=   `sum ${sum}`
-
-    }
-</script>
+    <script>
+        function calsum()
+        {
+            const number1Element = document.getElementById("number1")
+            const number2Element = document.getElementById("number2")
+    
+            const sum = parseInt(number1Element.value)  + parseInt(number2Element.value) 
+            const result = document.getElementById("text_result")
+    
+            result.innerText=   `Sum : ${sum}`
+    
+        }
+    </script>
 
 
 </body>
